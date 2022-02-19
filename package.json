@@ -1,5 +1,5 @@
 {
-  "name": "straem",
+  "name": "straemjs",
   "version": "1.0.0",
   "description": "Straem is a minimal wrapper for the custom event browser api",
   "main": "./dist/index.js",

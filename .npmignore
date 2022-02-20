@@ -4,6 +4,8 @@ node_modules
 .gitignore
 rollup.config.js
 tsconfig.json
+.prettierrc
+.prettierignore
 
 *.zip
 

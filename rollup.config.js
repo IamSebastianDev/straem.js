@@ -9,13 +9,11 @@ export default [
       {
         file: "./dist/index.esm.js",
         format: "esm",
-
         sourcemap: true,
       },
       {
         file: "./dist/index.js",
         format: "cjs",
-        plugins: [terser({ module: false, toplevel: true })],
         sourcemap: true,
       },
 

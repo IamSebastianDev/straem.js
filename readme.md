@@ -56,7 +56,7 @@ const listener = receive("custom-event", "another-event");
 
 // You can use the 'from' method to set the target of the event
 
-const listener = receive("custom-event").from("window");
+const listener = receive("custom-event").from(window);
 
 // To create the listener(s) and register a callback, use the 'then' method returned by
 // either the 'receive' or 'from' method and pass a handler and an optional opitions object.

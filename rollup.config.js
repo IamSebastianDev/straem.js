@@ -27,6 +27,7 @@ export default [
         format: "iife",
         plugins: [terser()],
         sourcemap: true,
+        name: "straem",
       },
     ],
   },

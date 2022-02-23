@@ -16,7 +16,7 @@ export function dispatch(...eventNames: string[]): {
 };
 /** @format */
 /**
- * The dispatch method is used to create a custom eventListener.
+ * The receive method is used to create a custom eventListener.
  *
  * @param  {...string} eventNames - Any number of strings that describes the names of the
  * CustomEvents/Events to listen to.

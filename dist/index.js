@@ -83,7 +83,7 @@ const stream = () => {
 /** @format */
 
 /**
- * The dispatch method is used to create a custom eventListener.
+ * The receive method is used to create a custom eventListener.
  *
  * @param  {...string} eventNames - Any number of strings that describes the names of the
  * CustomEvents/Events to listen to.
@@ -157,11 +157,11 @@ const dispatch = (...eventNames) => {
      * Method to disptach the event with a give payload. A event will be dispatched for every eventName existing on the
      * created dispatcher. The eventInit object is optional and is the same as a regular event.
      *
-     * @param { * } payload - The payload that will be created on the event.detail property.
+     * @param { *? } payload - The payload that will be created on the event.detail property.
      * @param { {}? } eventInit - a eventInit object as described by the Event() interface.
      */
 
-    with(payload, eventInit = {}) {
+    with(payload = null, eventInit = {}) {
       // Add the payload to the eventInit object.
       eventInit.detail = payload;
 

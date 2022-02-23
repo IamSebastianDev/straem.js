@@ -27,6 +27,22 @@ You can also use it directly in the browser and include it via CDN (or locally, 
 
 ## 🔧 Usage
 
+### Imports and Global
+
+**Stræm** provides exports for modern `import` syntax as well as exports for the `require` syntax.
+
+```js
+const { receive, dispatch } = require("straemjs");
+
+import { receive, dispatch } from "straemjs";
+```
+
+In case you included the **Stræm** file via CDN, the `straem` object is globally available.
+
+```js
+const { receive, dispatch } = straem;
+```
+
 ### Creating a custom event listener
 
 To receive and listen to custom (or built-in) event, use the `receive()` method

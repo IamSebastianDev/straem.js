@@ -1,6 +1,6 @@
 {
   "name": "straemjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Straem is a minimal wrapper for the custom event browser api",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.mjs",

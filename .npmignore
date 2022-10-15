@@ -1,11 +1,11 @@
 node_modules
 .env
-
-.gitignore
-rollup.config.js
-tsconfig.json
+.config
+.github
 .prettierrc
 .prettierignore
+.idea
+.archive
 
 *.zip
 
@@ -47,3 +47,13 @@ Temporary Items
 
 # Local History for Visual Studio Code
 .history/
+
+# Yarn
+.yarn/*
+yarn-error.log
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

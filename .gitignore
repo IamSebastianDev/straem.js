@@ -1,6 +1,8 @@
 node_modules
 .env
 dist
+.idea
+.archive
 
 *.zip
 
@@ -41,3 +43,13 @@ Temporary Items
 
 # Local History for Visual Studio Code
 .history/
+
+# Yarn
+.yarn/*
+yarn-error.log
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

@@ -1,14 +1,16 @@
 <!-- @format -->
 
-# Stræm.js
+# Stræm
 
-Stræm.js is a minimal wrapper for the [Custom Event API](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent).
+**Stræm** is a minimal wrapper for the [Custom Event API](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent).
 
 ## 🚀 Getting started
 
-To use **Stræm** with npm and/or a bundler such as webpack or rollup, install it via npm:
+To use **Stræm** with npm and/or a bundler such as webpack or rollup, install it via yarn or npm:
 
 ```bash
+yarn add straemjs
+# or use npm
 npm install straemjs
 ```
 
@@ -16,12 +18,12 @@ You can also use it directly in the browser and include it via CDN (or locally, 
 
 ```html
 <head>
-  ...
-  <!-- as a local file -->
-  <script src="./your/path/to/straem.browser.min.js"></script>
-  <!-- or via CDN -->
-  <script src="http://unpkg.com/straemjs"></script>
-  ...
+    ...
+    <!-- as a local file -->
+    <script src="./your/path/to/straem.browser.min.js"></script>
+    <!-- or via CDN -->
+    <script src="http://unpkg.com/straemjs"></script>
+    ...
 </head>
 ```
 
@@ -32,9 +34,11 @@ You can also use it directly in the browser and include it via CDN (or locally, 
 **Stræm** provides exports for modern `import` syntax as well as exports for the `require` syntax.
 
 ```js
-const { receive, dispatch } = require("straemjs");
+// node require syntax
+const { receive, dispatch } = require('straemjs');
 
-import { receive, dispatch } from "straemjs";
+// modern es6 style syntax
+import { receive, dispatch } from 'straemjs';
 ```
 
 In case you included the **Stræm** file via CDN, the `straem` object is globally available.
@@ -48,21 +52,21 @@ const { receive, dispatch } = straem;
 To receive and listen to custom (or built-in) event, use the `receive()` method
 
 ```js
-import { receive } from "straemjs";
+import { receive } from 'straemjs';
 
 // Use the receive method to register one or more event names for the listener
 
-const listener = receive("custom-event", "another-event");
+const listener = receive('custom-event', 'another-event');
 
 // You can use the 'from' method to set the target of the event
 
-const listener = receive("custom-event").from(window);
+const listener = receive('custom-event').from(window);
 
 // To create the listener(s) and register a callback, use the 'then' method returned by
-// either the 'receive' or 'from' method and pass a handler and an optional opitions object.
+// either the 'receive' or 'from' method and pass a handler and an optional opinions object.
 // The method returns a function to remove the created listener(s).
 
-const dispose = receive("custom-event").then(handler, eventInit);
+const dispose = receive('custom-event').then(handler, eventInit);
 ```
 
 ### Dispatching a custom event
@@ -70,49 +74,53 @@ const dispose = receive("custom-event").then(handler, eventInit);
 To dispatch a custom event, use the `dispatch()` method.
 
 ```js
-import { dispatch } from "straemjs";
+import { dispatch } from 'straemjs';
 
 // Use the dispatch method to register one ore more event names for dispatching.
 // As with the receive method, you can chain the from method to set the target.
 
-const send = dispatch("custom-event").from(window);
+const send = dispatch('custom-event').from(window);
 
 // Use the 'with' method to dispatch the event with a given payload.
 
-send.with({ hello: "world" });
+send.with({ hello: 'world' });
 ```
 
 ## API
 
 ## `receive()`
 
-`receive(...string) => { from: function, then: function, eventTarget: EventTarget, eventNames: string[] }`
+Type: `receive(...string: string[]) => { from: Function, then: Function, eventTarget: EventTarget, eventNames: string[] }`
 
-The receive method is used to create a custom event listener. Pass any number of strings as argument. The method returns the reciever object, containing the `from()`, `then()`, `eventTarget` & `eventNames` properties.
+The receive method is used to create a custom event listener. Pass any number of strings as argument. The method returns the `Receiver` object, containing the `from()`, `then()`, `eventTarget` & `eventNames` properties.
 
 ## `dispatch()`
 
-`dispatch(...string) => {from: function, with: function, eventTarget: EventTarget, eventNames: string[] }`
+Type: `dispatch(...string: string[]) => { from: Function, with: Function, eventTarget: EventTarget, eventNames: string[] }`
 
-The dispatch method is used to create a custom event dispatcher. Pass any number of strings as argument. The method returns the reciever object, containing the `from()`, `with()`, `eventTarget` & `eventNames` properties.
+The dispatch method is used to create a custom event dispatcher. Pass any number of strings as argument. The method returns the `Dispatcher` object, containing the `from()`, `with()`, `eventTarget` & `eventNames` properties.
 
-## `from()`
+## `Receiver.from() / Dispatcher.from()`
 
-`from(EventTarget) => { this }`
+Type: `from(eventTarget: EventTarget) => { this }`
 
 The from method is used to set the eventTarget of the `receive()`of `dispatch()` methods. The method will return the receive of dispatch object, respective of the method that it was called from.
 
-## `then()`
+## `Receiver.then()`
 
-`then(handler: function, eventInit: object) => function`
+Type: `then<T>(action: Action<T>, eventInit?: AddEventListenerOptions) => function`
 
 The then method is used to execute the specified handler function when the custom event is received. The method takes a `eventInit` object as second parameter, which is equal to the options provided by the [Event interface](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event). The method returns a function to remove all created listeners.
 
-## `with()`
+## `Dispatcher.with()`
 
-`with(payload: any, eventInit: object) => void`
+Type: `with(payload?: any, eventInit?: EventInit) => void`
 
-The with method is used to dispatch the created event from the `dispatch()` method with a specified payload. The method takes a `eventInit` object as second parameter, which is equal to the options provided by the [Event interface](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event). The payload will default to `null` if not specified.
+The with method is used to dispatch the created event from the `dispatch()` method with a specified payload. The method takes a `eventInit` object as second parameter, which is equal to the options provided by the [Event interface](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event). The payload will default to `undefined` if not specified.
+
+## Contributing
+
+If you would like to contribute, take a look at the [contribution guide](./contributing.md).
 
 ## License
 

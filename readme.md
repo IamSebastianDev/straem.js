@@ -2,6 +2,9 @@
 
 # Stræm
 
+[![Npm package version](https://badgen.net/npm/v/straemjs)](https://www.npmjs.com/package/straemjs) [![Npm package total downloads](https://badgen.net/npm/dt/straemjs)](https://npmjs.com/package/straemjs) [![Npm package license](https://badgen.net/npm/license/straemjs)](https://npmjs.com/package/straemjs)
+[![Github tag](https://badgen.net/github/tag/iamsebastiandev/straem.js)](https://github.com/iamsebastiandev/straem.js/tags)
+
 **Stræm** is a minimal wrapper for the [Custom Event API](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent).
 
 ## 🚀 Getting started

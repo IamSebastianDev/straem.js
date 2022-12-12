@@ -21,7 +21,7 @@
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@types/jsdom": "^20.0.0",
     "@types/node": "^18.11.0",
-    "esbuild": "^0.15.11",
+    "esbuild": "^0.16.4",
     "husky": "^8.0.1",
     "prettier": "^2.5.1",
     "pretty-quick": "^3.1.3",

@@ -803,10 +803,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.0.tgz#5fb2e536c1ae9bf35366eed879e827fa59ca41c2"
   integrity sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==
 
-"@types/jsdom@^20.0.0":
-  version "20.0.0"
-  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-20.0.0.tgz#4414fb629465167f8b7b3804b9e067bdd99f1791"
-  integrity sha512-YfAchFs0yM1QPDrLm2VHe+WHGtqms3NXnXAMolrgrVP6fgBHHXy1ozAbo/dFtPNtZC/m66bPiCTWYmqp1F14gA==
+"@types/jsdom@^21.1.0":
+  version "21.1.0"
+  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-21.1.0.tgz#219f15e3370da3f85d18fe02ae86bda7ff66104a"
+  integrity sha512-leWreJOdnuIxq9Y70tBVm/bvTuh31DSlF/r4l7Cfi4uhVQqLHD0Q4v301GMisEMwwbMgF7ZKxuZ+Jbd4NcdmRw==
   dependencies:
     "@types/node" "*"
     "@types/tough-cookie" "*"
@@ -827,21 +827,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.0.tgz#f38c7139247a1d619f6cc6f27b072606af7c289d"
   integrity sha512-IOXCvVRToe7e0ny7HpT/X9Rb2RYtElG1a+VshjwT00HxrM2dWBApHQoqsI6WiY7Q03vdf2bCrIGzVrkF/5t10w==
 
-
-"@types/node@^14.0.0":
-  version "14.18.32"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.32.tgz#8074f7106731f1a12ba993fe8bad86ee73905014"
-  integrity sha512-Y6S38pFr04yb13qqHf8uk1nHE3lXgQ30WZbv1mLliV9pt0NjvqdWttLcrOYLnXbOafknVYRHZGoMSpR9UwfYow==
-
 "@types/normalize-package-data@^2.4.0", "@types/normalize-package-data@^2.4.1":
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
-
-"@types/parse-json@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
-  integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
 "@types/resolve@1.20.2":
   version "1.20.2"
@@ -1362,17 +1351,6 @@ cosmiconfig-typescript-loader@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/cosmiconfig-typescript-loader/-/cosmiconfig-typescript-loader-4.1.1.tgz#38dd3578344038dae40fdf09792bc2e9df529f78"
   integrity sha512-9DHpa379Gp0o0Zefii35fcmuuin6q92FnLDffzdZ0l9tVd3nEobG3O+MZ06+kuBvFTSVScvNb/oHA13Nd4iipg==
-
-cosmiconfig@^7.0.0:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-7.0.1.tgz#714d756522cace867867ccb4474c5d01bbae5d6d"
-  integrity sha512-a1YWNUV2HwGimB7dU2s1wUMurNKjpx60HxBB6xUM8Re+2s1g1IIfJvFR0/iCF+XHdE0GMTKTuLR32UQff4TEyQ==
-  dependencies:
-    "@types/parse-json" "^4.0.0"
-    import-fresh "^3.2.1"
-    parse-json "^5.0.0"
-    path-type "^4.0.0"
-    yaml "^1.10.0"
 
 cosmiconfig@^8.0.0:
   version "8.0.0"
@@ -2644,13 +2622,6 @@ magic-string@^0.25.7:
   version "0.25.9"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.9.tgz#de7f9faf91ef8a1c91d02c2e5314c8277dbcdd1c"
   integrity sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==
-  dependencies:
-    sourcemap-codec "^1.4.8"
-
-magic-string@^0.26.7:
-  version "0.26.7"
-  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.26.7.tgz#caf7daf61b34e9982f8228c4527474dac8981d6f"
-  integrity sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==
   dependencies:
     sourcemap-codec "^1.4.8"
 
@@ -4435,11 +4406,6 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
-
-yaml@^1.10.0:
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
-  integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
 yargs-parser@^20.2.3:
   version "20.2.9"

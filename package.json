@@ -30,7 +30,7 @@
     "rollup-plugin-dts": "^6.0.0",
     "rollup-plugin-esbuild": "^6.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "semantic-release": "^22.0.5",
+    "semantic-release": "^23.0.4",
     "typescript": "^5.0.4"
   },
   "scripts": {
